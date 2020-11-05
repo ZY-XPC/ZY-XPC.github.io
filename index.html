@@ -1,477 +1,221 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>我的网址</title>
-<style type="text/css">
-body {
-	background-image: url(%E9%BB%91%E6%B0%B4%E4%B9%8B%E5%AE%B6/%E7%BD%91%E7%AB%99%E8%83%8C%E6%99%AF.jpg);
-	color: #FFFFFF;
-	margin-left: 100px;
-	margin-top: 100px;
-	margin-right: 100px;
-	margin-bottom: 100px;
-}
-a:link {
-	text-decoration: none;
-	color: #00FFBB;
-}
-a:visited {
-	text-decoration: none;
-	color: #FF0004;
-}
-a:hover {
-	text-decoration: none;
-	color: #F4EB0C;
-}
-a:active {
-	text-decoration: none;
-	color: #001CF9;
-	font-style: normal;
-}
-body,td,th {
-	color: #FFFFFF;
-}
-</style>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0027)http://itzoo.info/love.html -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Love</title>
+        
+        <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+        <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+        <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+        <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+        <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+        <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+        <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+        <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+        <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
 
-<body>
-<div id="timer" style="font:11px tahoma;height:10px;"></div>
+    </head>
+    <body>
+        <div id="main">
+            <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
+            <div id="wrap">
+               <div id="text">
+                    <div id="code">                 
+                    <span class="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</span><br>
+                    <span class="say">我会守护你生命里的精彩，并陪伴你一路精彩下去。</span><br>
+                    <span class="say">你的幸福快乐，是我一生的追求。</span><br>
+                    <span class="say">我会每一天带着笑脸，和你说早安，</span><br>
+                     <span class="say">我会每一晚与你道声晚安再入梦乡，</span><br>
+                    <span class="say">我会带你去所有你想去的地方，</span><br>
+                    <span class="say">陪你闹看你笑</span><br>
+                    <span class="say">历经你生命中所有的点点滴滴。</span><br>
+                    <span class="say">我期待这一生与你一起走过，</span><br>
+                    <span class="say">我期待与你慢慢变老</span><br>
+                    <span class="say">等我们老到哪儿也去不了，</span><br>
+                    <span class="say">还能满载着一生的幸福快乐 ！</span><br>
+                    <br>
+                    <span class="say">我会为我们的未来撑起一片天空，</span><br>
+                     <span class="say">为我们的将来担负起一生的责任，</span><br>
+                      <span class="say">愿意为你去做每一件能让你开心快乐的事。</span><br>
+                       <span class="say">所有我们经历的点点滴滴，</span><br>
+                        <span class="say">都是我们一辈子最美的回忆。</span><br>
+                         <span class="say">我愿意爱你直到老去！</span><br>
+                   <br>
+                    <span class="say"><span class="space"></span> -- Yours, wuxia2001.</span>
+                    </div>
+                </div>
+                <div id="clock-box">
+                    <a href="http://blog.csdn.net/wuxia2001" target="_blank">@wuxia2001</a> 与 <a href="http://blog.csdn.net/wuxia2001" target="_blank">@月亮女</a> 在一起的
+                        <div id="clock"></div>
+                </div>
+                <canvas id="canvas" width="1100" height="680"></canvas>
+            </div>
+            <audio src="love.mp3" autoplay="autoplay"></audio>
+        </div>
+    
+    <script>
+    </script>
+
+    <script>
+    (function(){
+        var canvas = $('#canvas');
+
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
+
+        var width = canvas.width();
+        var height = canvas.height();
+        
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]] 
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
+
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
+
+        canvas.click(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0; 
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e){
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
+
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
+
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            // 会有闪烁不得意这样做, (＞﹏＜)
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
+
+        var jumpAnimate = eval(Jscex.compile("async", function () {
+            var ctx = tree.ctx;
+            while (true) {
+                tree.ctx.clearRect(0, 0, width, height);
+                tree.jump();
+                foot.draw();
+                $await(Jscex.Async.sleep(25));
+            }
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var together = new Date();
+            together.setFullYear(2010, 5, 8);
+            together.setHours(20);
+            together.setMinutes(20);
+            together.setSeconds(0);
+            together.setMilliseconds(0);
+
+            $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
+
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+
+            textAnimate().start();
+
+            $await(jumpAnimate());
+        }));
+
+        runAsync().start();
+    })();
+    </script>
 
 
-<h2 align="center" style="color: #FFFFFF">黑龙江大学</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr align="center" valign="middle">
-        <td width="200" height="30"><a href="http://xyw.hlju.edu.cn" target="_blank">校园信息门户</a></td>
-        <td width="200" height="30"><a href="http://my.hlju.edu.cn" target="_blank">门户登录</a></td>
-        <td width="200" height="30"><a href="http://210.46.107.20" target="_blank">图书馆</a></td>
-        <td width="200" height="30"><a href="http://mooc.hlju.edu.cn/portal" target="_blank">网络教学平台</a></td>
-        <td width="200" height="30"><a href="http://job.hlju.edu.cn" target="_blank">就业信息网</a></td>
-      </tr>
-      <tr align="center" valign="middle">
-        <td width="200" height="30"><a href="http://xgb.hlju.edu.cn/index.htm" target="_blank">党委学工部</a></td>
-        <td width="200" height="30"><a href="http://ggfwpt.hlju.edu.cn" target="_blank">公共服务平台</a></td>
-        <td width="200" height="30"><a href="http://mooc1.hlju.edu.cn/course/87207807.html" target="_blank">网络安全技术</a></td>
-        <td width="200" height="30"><a href="http://xsxk.hlju.edu.cn/xsxk/" target="_blank">选课系统</a></td>
-        <td width="200" height="30">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">中国科学院大学</h2>
-<div align="center">
-<table width="0" border="1">
-  <tbody>
-    <tr>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.las.ac.cn" target="_blank">文献情报中心</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://lib.ucas.ac.cn" target="_blank">校图书馆</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://onestop.ucas.edu.cn" target="_blank">综合信息网</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://210.72.129.18:8080" target="_blank">所图书馆</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://news.ucas.ac.cn" target="_blank">新闻网</a></td>
-    </tr>
-    <tr>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://blog.sina.com.cn/s/blog_70e2c5c00102ywex.html" target="_blank">道路命名</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.iae.cas.cn" target="_blank">生态所</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://ecoclimate.iae.ac.cn:8080/index" target="_blank">生态气候组</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://cre.ucas.ac.cn" target="_blank">资环学院</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://mail.cstnet.cn/coremail/XT5/index.jsp?sid=SAHJVtOOWJyaEFCXiWOOHoENUauQazgE#mail.welcome" target="_blank">邮箱</a></td>
-    </tr>
-    <tr>
-      <td height="30" align="center" valign="middle"><a href="http://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&search_mode=GeneralSearch&SID=6FLu5y6mT8yMliCSVF1&preferencesSaved=" target="_blank">Web Of  Science</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://192.168.252.3" target="_blank">IP登录</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://v.ucas.ac.cn/main/index.do;jsessionid=30D39B29D454DB10020A58B74E6ECC4D?menuCode=1" target="_blank">实景课堂</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://calendar.ucas.ac.cn/index/monthCalendar.do?classificationId=0" target="_blank">活动日历</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://job.ucas.ac.cn" target="_blank">就业信息网</a></td>
-    </tr>
-    <tr>
-      <td height="30" align="center" valign="middle"><a href="http://job.cas.cn/bns/front/Index/showAddPage.do" target="_blank">中国科学院招聘网</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://www.cas.cn" target="_blank">中国科学院</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://www.las.ac.cn/others/ResourceNavigation.jsp?SubFrameID=1068" target="_blank">文献情报中心资源</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://www.ucas.edu.cn/site/3?q=q&fenyuanId=363" target="_blank">培养单位</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://www.ucas.edu.cn/site/31" target="_blank">研究所招生</a></td>
-    </tr>
-    <tr>
-      <td height="30" align="center" valign="middle"><a href="https://renwen.ucas.ac.cn/index.php/rczp/2015-12-09-08-37-2" target="_blank">人文学院</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://v.qq.com/vplus/caab31095363616ce59d64df08a6d68f" target="_blank">国科大微信视频</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://jwxk.ucas.ac.cn/public/showExamInfo" target="_blank">考试安排</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://zhaosheng.ucas.ac.cn/sign_up/BSBM/SZBBM/index.aspx" target="_blank">博士报名</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://www.irgrid.ac.cn" target="_blank">机构知识库网络</a></td>
-    </tr>
-    <tr>
-      <td height="30" align="center" valign="middle"><a href="https://pan.baidu.com/s/1slGOFdb#list/path=%2F" target="_blank">国科大图书馆</a></td>
-      <td height="30" align="center" valign="middle"><a href="http://www.las.ac.cn/endnote/endnote.jsp" target="_blank">国科图Endnote</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://author.osid.org.cn/login" target="_blank">开放科学</a></td>
-      <td height="30" align="center" valign="middle">&nbsp;</td>
-      <td height="30" align="center" valign="middle">&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
-<h2 align="center">新媒体运营</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://mp.weixin.qq.com" target="_blank">微信公众平台</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://bj.96weixin.com" target="_blank">96微信编辑器</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.ipaiban.com" target="_blank">i 排版</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://s1.jietu001.com/index/factory/wechat.html" target="_blank">对话生成器</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://cli.im" target="_blank">草料二维码</a></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://jump.sinaapp.com" target="_blank">新浪短网址</a><a href="http://sc.chinaz.com" target="_blank"></a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.uupoop.com/gif/" target="_blank">GIF闪图制作</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://naotu.baidu.com" target="_blank">百度脑图</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.chuangkit.com/dc.html" target="_blank">创客贴</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://xiumi.us/#/" target="_blank">秀米</a></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.135editor.com" target="_blank">135编辑器</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.liubear.com/College.html" target="_blank">小熊大学</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.processon.com/diagraming/5b91380de4b0d4d65bfa2e37" target="_blank">作图网</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.mikecrm.com/form.php#/submit?id=200031882" target="_blank">麦客</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.arkie.cn/welcome" target="new">作图</a></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://mp.toutiao.com" target="_blank">今日头条</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://zm.look.360.cn/#!/login" target="_blank">360众媒平台</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://k.21cn.com/api/activity/kjlogin/index.html?redirectUrl=http://k.21cn.com/jsp/userAdmin/authen/html/authen_success.html" target="_blank">看荐</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://baijiahao.baidu.com/" target="_blank">百家号</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://dy.163.com/wemedia/login.html" target="_blank">网易媒体开放平台</a></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://weixiao.qq.com/store/apps/" target="_blank">腾讯微校</a></td>
-        <td width="200" height="30" align="center" valign="middle"><p><a href="https://www.mengxiaozhu.cn/#/" target="_blank">萌小助</a></p></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.shotcut.org" target="_blank">视频编辑</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.blendercn.org/" target="_blank">blender</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://wxhand.com/Home/User/login.html" target="_blank">掌上大学</a></td>
-      </tr>
-      <tr>
-        <td height="30" align="center" valign="middle"><a href="http://www.zhang-chu.com/?page_id=13" target="_blank">掌触科技</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://www.wjx.cn/newwjx/manage/myquestionnaires.aspx" target="_blank">问卷星</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://www.52doutu.cn" target="_blank">斗图终结者</a></td>
-        <td height="30" align="center" valign="middle"><a href="http://www.yinpinghui.com" target="_blank">合成配音</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://www.wdku.net" target="_blank">小工具汇总</a></td>
-      </tr>
-      <tr>
-        <td height="30" align="center" valign="middle"><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" target="_blank">小程序</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html?t=201842" target="_blank">开发者工具下载</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://blog.csdn.net/kevin_xq/article/details/72772094" target="_blank">开发者工具详解</a></td>
-        <td height="30" align="center" valign="middle"><p><a href="https://cloudconvert.com" target="_blank">website to pic</a></p></td>
-        <td height="30" align="center" valign="middle"><a href="http://tools.jb51.net" target="_blank">脚本之家</a></td>
-      </tr>
-      <tr>
-        <td height="30" align="center" valign="middle"><a href="http://www.gsdata.cn" target="_blank">清博大数据</a></td>
-        <td height="30" align="center" valign="middle"><a href="http://www.u-qun.com/auth/login?ReturnUrl=%2f" target="_blank">进群宝</a></td>
-        <td height="30" align="center" valign="middle"><a href="http://yciyun.com" target="_blank">词云</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://wordart.com/" target="_blank">word art</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://www.gaoding.com" target="_blank">稿定设计</a></td>
-      </tr>
-      <tr>
-        <td height="30" align="center" valign="middle"><a href="https://www.wakatool.com" target="_blank">工具集</a></td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h3 align="center" style="color: #FFFFFF; font-size: x-large;">图片素材</h3>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr>
-        <td height="30" align="center" valign="middle"><a href="http://www.58pic.com" target="new">千图网</a></td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://huaban.com/all/" target="_blank">(100+) 最新采集</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.zcool.com.cn" target="_blank">站酷 (ZCOOL)</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://unsplash.com" target="_blank">Unsplash - Free HD Photos</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.gratisography.com" target="_blank">Free high-resolution </a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://588ku.com" target="_blank">千库网</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<p align="center" style="color: #FFFFFF; font-size: x-large;">PS</p>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr align="center" valign="middle">
-        <td width="200" height="30"><a href="http://sc.chinaz.com" target="_blank">站长素材</a></td>
-        <td width="200" height="30"><a href="http://www.psjia.com" target="_blank">PS家园网</a></td>
-        <td width="200" height="30"><a href="http://www.68ps.com" target="_blank">PS联盟</a></td>
-        <td width="200" height="30"><a href="http://www.vipsheji.cn" target="_blank">设计网站大全</a></td>
-        <td width="200" height="30"><a href="https://shida66.com/?c=VideoInfo&a=detail&vid=7008" target="_blank">抠头发</a></td>
-      </tr>
-      <tr align="center" valign="middle">
-        <td width="200" height="30"><a href="https://www.photopea.com" target="_blank">图片在线编辑</a></td>
-        <td width="200" height="30">&nbsp;</td>
-        <td width="200" height="30">&nbsp;</td>
-        <td width="200" height="30">&nbsp;</td>
-        <td width="200" height="30">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">系统&amp;软件</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.windows7en.com" target="_blank">Windows7之家</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.chinaitlab.com" target="_blank">中国IT实验室</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="https://apps.lenovo.com.cn" target="_blank">联想软件中心</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.wooyun.org" target="_blank">乌云</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="https://www.deepin.org" target="_blank">深度技术</a></div></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.ubuntukylin.com" target="_blank">优麒麟</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://chongzhuang.windowszj.com" target="_blank">一键重装系统</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.doudouxitong.net/tools/" target="_blank">豆豆系统</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.pccppc.com/?o" target="_blank">小马</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.17rd.com" target="_blank">锐动天地</a></div></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://u.duba.com" target="_blank">金山装机联盟</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.microsoft.com/accessories/zh-cn/downloads" target="_blank">微软设备下载</a></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><strong><a href="http://bbs.pcbeta.com/viewthread-1519058-1-2.html" target="_blank">华硕T100TA</a></strong></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><strong><a href="http://bbs.pcbeta.com/viewthread-1519058-1-2.html" target="_blank">华硕T100TA</a></strong></div></td>
-        <td width="200" height="30" align="center" valign="middle"><div align="center"><a href="http://www.csdn.net" target="_blank">CSDN</a></div></td>
-      </tr>
-      <tr>
-        <td height="30" align="center" valign="middle"><a href="http://www.pccppc.com/?o" target="_blank">小马激活</a></td>
-        <td height="30" align="center" valign="middle"><a href="http://www.xingkbjm.com" target="_blank">星空绿色软件</a></td>
-        <td height="30" align="center" valign="middle"><a href="http://www.nirsoft.net" target="_blank">NirSoft</a></td>
-        <td height="30" align="center" valign="middle"><a href="http://52flac.com" target="_blank">无损音乐下载</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://www.updatestar.com/directdownload/vyprvpn-for-windows/2385771" target="_blank">vpn</a></td>
-      </tr>
-      <tr>
-        <td height="30" align="center" valign="middle"><a href="https://www.echafen.com" target="_blank">易查分</a></td>
-        <td height="30" align="center" valign="middle"><a href="https://smallpdf.com/cn" target="_blank">玩转PDF</a></td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-        <td height="30" align="center" valign="middle">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">时评类节目</h2>
-<div align="center">
-  <table width="0" border="1" style="">
-    <tbody>
-      <tr align="center" valign="middle">
-        <td width="200" height="30"><a href="http://tv.cntv.cn/video/C10447/802eaac2613a4df89ed37c163295a101" target="_blank">今日关注</a></td>
-        <td width="200" height="30"><a href="http://www.ftchinese.com" target="_blank">FT中文网</a></td>
-        <td width="200" height="30" align="center" valign="middle">&nbsp;</td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.guokr.com" target="_blank">果壳网</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://news.sciencenet.cn/htmlnews/2017/10/390345.shtm" target="_blank">科学网</a></td>
-      </tr>
-      <tr>
-        <td align="center" valign="middle"><a href="https://www.guancha.cn/?s=dhshouye" target="_blank">观察者网</a></td>
-        <td align="center" valign="middle"><a href="http://www.stdaily.com" target="_blank">中国科技网</a></td>
-        <td align="center" valign="middle"><a href="http://piyao.jfdaily.com" target="_blank">上海辟谣</a></td>
-        <td align="center" valign="middle"><a href="https://www.jfdaily.com/home" target="_blank">上观</a></td>
-        <td align="center" valign="middle"><a href="https://www.thepaper.cn" target="_blank">澎湃新闻</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">考研网站</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr align="center" valign="middle">
-        <td width="200" height="30"><a href="http://yz.chsi.com.cn" target="_blank">研招网</a></td>
-        <td width="200" height="30"><a href="http://www.chinakaoyan.com" target="_blank">中国考研网</a></td>
-        <td width="200" height="30"><a href="http://bbs.kaoyan.com" target="_blank">考研论坛</a></td>
-        <td width="200" height="30">&nbsp;</td>
-        <td width="200" height="30">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">视频</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://v.youku.com/v_show/id_XMTM3MjYxMjUyMA==.html?spm=a2h0j.8191423.item_XMTM3MjYxMjUyMA==.A" target="_blank">逻辑思维</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.newcger.com" target="_blank">数字分享</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://study.163.com/course/courseLearn.htm?courseId=821008#/learn/video?lessonId=989091&courseId=821008" target="_blank">吉他入门</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.xl720.com/thunder/years/2017">迅雷之家</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://lcoc.top/2.2/" target="_blank">蓝调解析</a></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.lwgod.com" target="_blank">梦幻天堂</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://hdscg.com" target="_blank">圣城家园</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://sskzmz.com/?p=1373" target="_blank">SSK字幕组</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.btmule.org">BT搜索</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.qmaile.com" target="_blank">全民解析</a></td>
-      </tr>
-      <tr>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.panduoduo.net/bd" target="_blank">百度网盘资源</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.miguxue.com/course/709241.html" target="_blank">磁力链接</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://www.weibovideo.com" target="_blank">微博视频解析下载</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="https://www.e99w.com/list/1.html" target="_blank">悠久影院</a></td>
-        <td width="200" height="30" align="center" valign="middle"><a href="http://zh_cn.openshot.org/files/user-guide/introduction.html" target="_blank">OPENSHOT</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">竞赛</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr align="center">
-        <td width="200" height="30" valign="middle"><a href="http://www.godasai.com" target="_blank">去大赛网</a></td>
-        <td width="200" height="30" valign="middle"><a href="http://www.52jingsai.com/portal.php" target="_blank">我爱竞赛网</a></td>
-        <td width="200" height="30" valign="middle">&nbsp;</td>
-        <td width="200" height="30" valign="middle">&nbsp;</td>
-        <td width="200" height="30" valign="middle">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">俄语</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr align="center">
-        <td width="200" height="30" valign="middle"><a href="https://ru.hujiang.com" target="_blank">沪江俄语</a></td>
-        <td width="200" height="30" valign="middle"><a href="https://ru.hujiang.com/new/p591173/" target="_blank">辅音发音规则</a></td>
-        <td width="200" height="30" valign="middle"><a href="https://ru.hujiang.com/new/p590586/" target="_blank">字母发音</a></td>
-        <td width="200" height="30" valign="middle"><a href="https://ru.hujiang.com/new/p591169/" target="_blank">元音发音</a></td>
-        <td width="200" height="30" valign="middle"><a href="https://ru.hujiang.com/new/p591983/" target="_blank">发音汇总</a></td>
-      </tr>
-      <tr align="center">
-        <td height="30" valign="middle"><a href="https://www.wanmen.org" target="_blank">万门大学</a></td>
-        <td height="30" valign="middle"><a href="http://lib.fifedu.com/toIndexPage.do" target="_blank">外研讯飞</a></td>
-        <td height="30" valign="middle"><a href="https://chuanke.baidu.com/course/72354462177427456_俄语_____.html" target="_blank">百度传课俄语</a></td>
-        <td height="30" valign="middle"><a href="https://static.video.qq.com/TPout.swf?vid=f0141mkwouu&auto=0" target="_blank">发音视频</a></td>
-        <td height="30" valign="middle"><a href="http://muz-color.ru/?s=детские+Песни" target="_blank">俄罗斯童谣</a></td>
-      </tr>
-      <tr align="center">
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-      </tr>
-      <tr align="center">
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">数据&amp;遥感</h2>
-<div align="center">
-  <table width="0" border="1">
-    <tbody>
-      <tr align="center">
-        <td width="200" height="30" valign="middle"><a href="http://data.cma.cn/user/toLogin.html" target="_blank">气象数据网</a></td>
-        <td width="200" height="30" valign="middle"><a href="http://www.chinaflux.org" target="_blank">通量观测研究联盟</a></td>
-        <td width="200" height="30" valign="middle"><a href="https://www.researchgate.net/signup.SignUp.html" target="_blank">ResearchGate </a></td>
-        <td width="200" height="30" valign="middle"><a href="https://malagis.com" target="_blank">麻辣GIS</a></td>
-        <td width="200" height="30" valign="middle">&nbsp;</td>
-      </tr>
-      <tr align="center">
-        <td height="30" valign="middle"><a href="http://blog.sina.com.cn/s/blog_764b1e9d0102yr7z.html" target="_blank">IDL代码示例</a></td>
-        <td height="30" valign="middle"><a href="http://www.chinaflux.org/gczd/index.aspx?nodeid=84" target="_blank">联盟站点</a></td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-      </tr>
-      <tr align="center">
-        <td height="30" valign="middle"><a href="http://blog.sina.com.cn/s/blog_764b1e9d0100xss4.html" target="_blank">地物波谱库</a></td>
-        <td height="30" valign="middle"><a href="http://blog.sina.com.cn/s/blog_764b1e9d0102v2dd.html" target="_blank">ENVI光谱分析</a></td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-      </tr>
-      <tr align="center">
-        <td height="30" valign="middle"><a href="http://wap.sciencenet.cn/home.php?mod=space&uid=3306552&do=blog&quickforward=1&id=1177208" target="_blank">卫星遥感及再分析数据</a></td>
-        <td height="30" valign="middle"><a href="https://search.earthdata.nasa.gov/search" target="_blank">Earthdata</a></td>
-        <td height="30" valign="middle"><a href="https://ladsweb.modaps.eosdis.nasa.gov" target="_blank">Ladsweb</a></td>
-        <td height="30" valign="middle"><a href="https://earthexplorer.usgs.gov/" target="_blank">EarthExplore</a></td>
-        <td height="30" valign="middle"><a href="http://www.gscloud.cn" target="_blank">地理空间数据云</a></td>
-      </tr>
-      <tr align="center">
-        <td height="30" valign="middle"><a href="http://www.ngcc.cn/ngcc/" target="_blank">基础地理信息中心</a></td>
-        <td height="30" valign="middle"><a href="http://blog.sciencenet.cn/home.php?mod=space&uid=466120&do=blog&id=556208" target="_blank">小熊工具箱</a></td>
-        <td height="30" valign="middle"><a href="https://blog.csdn.net/qq_41718357/article/details/83536322" target="_blank">哨兵二号</a></td>
-        <td height="30" valign="middle">&nbsp;</td>
-        <td height="30" valign="middle">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2 align="center" style="color: #FFFFFF">网页设计</h2>
-<div align="center">
-<table width="0" border="1">
-  <tbody>
-    <tr>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.coolsite360.com" target="_blank">意派</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.9466.com" target="_blank">9466</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://youhaosuda.com" target="_blank">友好</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://www.bootcss.com" target="_blank">前端开发框架</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://www.bootcdn.cn/jquery/" target="_blank">JS工具库</a></td>
-    </tr>
-    <tr>
-      <td width="200" height="30" align="center" valign="middle">&nbsp;</td>
-      <td width="200" height="30" align="center" valign="middle">&nbsp;</td>
-      <td width="200" height="30" align="center" valign="middle">&nbsp;</td>
-      <td width="200" height="30" align="center" valign="middle">&nbsp;</td>
-      <td width="200" height="30" align="center" valign="middle">&nbsp;</td>
-    </tr>
-    <tr>
-      <td height="30" align="center" valign="middle"><a href="https://www.runoob.com/css/css-howto.html" target="_blank">CSS相关</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://www.runoob.com/html/html5-canvas.html" target="_blank">html相关</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://www.runoob.com/tags/html-reference.html" target="_blank">html参考手册</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://www.runoob.com/html/html-quicklist.html" target="_blank">html速查列表</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://segmentfault.com/a/1190000006866550" target="_blank">控制台</a></td>
-    </tr>
-    <tr>
-      <td height="30" align="center" valign="middle"><a href="https://zhuanlan.zhihu.com/p/24187505" target="_blank">控制台指南</a></td>
-      <td height="30" align="center" valign="middle"><a href="https://search.earthdata.nasa.gov/search" target="_blank"></a></td>
-      <td height="30" align="center" valign="middle"><p><a href="https://ladsweb.modaps.eosdis.nasa.gov" target="_blank"></a></p></td>
-      <td height="30" align="center" valign="middle">&nbsp;</td>
-      <td height="30" align="center" valign="middle">&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
-<h2 align="center" style="color: #FFFFFF">其他</h2>
-<table width="0" border="1">
-  <tbody>
-    <tr>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.ancc.org.cn/Service/queryTools/Internal.aspx">条码信息查询</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.sptxm.com/?s=6901584199200">商品条码查询</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.bgczw.com" target="_blank">并购重组网</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.csrc.gov.cn/pub/newsite/ssgsjgb/ssbbgczxzxkhz/jggs/index.htm" target="_blank">证监会</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="http://www.ccgp.gov.cn" target="_blank">政府采购网</a></td>
-    </tr>
-    <tr>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://v.virscan.org/Trojan.Dropper.Heur.gen.html" target="_blank">病毒扫描</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://www.jianyu360.com/jylab/supsearch/index.html" target="_blank">剑鱼招标</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://habo.qq.com" target="_blank">腾讯哈勃</a></td>
-      <td width="200" height="30" align="center" valign="middle"><a href="https://pub.alimama.com/?spm=a219t.11816995.0.d34b1f9fa.319e75a5KFOTM7" target="_blank">淘宝联盟</a></td>
-      <td width="200" height="30" align="center" valign="middle">&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
-<p align="center" style="color: #FFFFFF">&nbsp;</p>
-<h3 align="center" style="color: #FFFFFF">&nbsp;</h3>
-<p align="center">&nbsp;</p>
-<p align="center">&nbsp;</p>
-</body>
-</html>
+
+</body></html>
