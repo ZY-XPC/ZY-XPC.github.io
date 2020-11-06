@@ -9,12 +9,12 @@ body{
 li{list-style: none;}
 html{font-family: 宋体;}
 #codeEdit{
-    width: 48%;
+    width: 8%;
     height: 97vh;
     margin: auto 0;
 }
 #resume{
-    width: 48%;
+    width: 88%;
     min-width: 700px;
     margin: auto 0;
     position: relative;
