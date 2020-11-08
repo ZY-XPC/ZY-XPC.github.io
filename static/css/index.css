@@ -14,7 +14,7 @@ html{font-family: 宋体;}
     margin: auto 0;
     position: relative;
     height: 97vh;
- /*   overflow-y: scroll;    自动滑动   */
+    overflow-y: scroll;
     display: flex;
 }
 .ul-list li::before{
