@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Our Story Since 2020</title>
-    <link rel="stylesheet" href="static/css/index.css"> 
+    <title>Edit-个人简历</title>
+    <script type="text/javascript" src="static/js/sakuraPlus.js"></script>   
+    <link rel="stylesheet" href="static/css/index.css">
     <style id="styleContent"></style>
 </head>
 <body>
@@ -15,8 +16,6 @@
 </body>
 <script src="static/js/textarr.js"></script>
 <script src="static/js/write.js"></script>
-<script type="text/javascript" src="static/js/sakuraPlus.js"></script>  
-
 <script>
     let currentIndex_ = 0
     function writeIntro (intro='', time, callback) {
@@ -31,8 +30,8 @@
         }, time);
     }
     function startResume () {
-        writeIntro(balloon, 700, ()=>{
-            writeIntro(line, 1200, ()=>{
+        writeIntro(balloon, 900, ()=>{
+            writeIntro(line, 200, ()=>{
                 writeIntro(text, 0, ()=>{
                     writeText(textArr[currentIndex_])
                 })
@@ -41,6 +40,16 @@
     }
     
     let num = 0
+    let t = setInterval(() => {
+        if(num <= style.length){
+            codeEdit.innerHTML = Prism.highlight(style.substr(0, num), Prism.languages.css); 
+            codeEdit.scrollTop = 100000
+            styleContent.innerHTML = style.substr(0, num)
+            num++
+        }else{
+            clearInterval(t)
+        }
+    }, 70)
     setTimeout(() => {
         if(document.body.clientWidth < 500){
             setTimeout(() => {
@@ -50,7 +59,6 @@
         startResume()
     }, 10000);
 </script>
-
 <script>
     let sbTimer = null
     function toggleScrollBar (self) {

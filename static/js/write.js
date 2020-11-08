@@ -1,5 +1,6 @@
 
 
+
 // Array[Object], ance: 当前children列表. 
 let parentList = []
 let List = [] // Array[Object], ance: 当前children列表. current: 当前子元素遍历下标. 遍历方式从深处开始遍历,"树"的数据结构
