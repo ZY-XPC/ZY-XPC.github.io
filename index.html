@@ -32,7 +32,7 @@
     }
     function startResume () {
         writeIntro(balloon, 700, ()=>{
-            writeIntro(line, 200, ()=>{
+            writeIntro(line, 000, ()=>{
                 writeIntro(text, 0, ()=>{
                     writeText(textArr[currentIndex_])
                 })
@@ -41,16 +41,6 @@
     }
     
     let num = 0
-    let t = setInterval(() => {
-        if(num <= style.length){
-            codeEdit.innerHTML = Prism.highlight(style.substr(0, num), Prism.languages.css); 
-            codeEdit.scrollTop = 100000
-            styleContent.innerHTML = style.substr(0, num)
-            num++
-        }else{
-            clearInterval(t)
-        }
-    }, 70)
     setTimeout(() => {
         if(document.body.clientWidth < 500){
             setTimeout(() => {
