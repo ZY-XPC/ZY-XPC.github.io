@@ -1,6 +1,4 @@
 ﻿
-
-
 *{margin:0;padding: 0;}
 body{
     height: 100vh;background:#ffe;
@@ -9,7 +7,7 @@ li{list-style: none;}
 html{font-family: 宋体;}
 
 #resume{
-    width: 80%;
+    width: 100%;
     min-width: 700px;
     margin: auto 0;
     position: relative;
