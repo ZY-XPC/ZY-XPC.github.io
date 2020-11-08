@@ -163,17 +163,6 @@ img#bg-balloon-logo{
         flex-direction: column;
     }
     #resume,
-    #codeEdit{
-        height: 50vh!important;
-        width: 100vw!important;
-        min-width: 100vw!important;
-    }
-    .line-wrap{
-        padding-left: 5px;
-    }
-    .line-left{
-        padding-left: 8px;
-    }
     .text-wrap{
         margin-left: 15px;
         padding: 60px 30px 40px 0;

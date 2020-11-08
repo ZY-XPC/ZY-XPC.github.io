@@ -75,9 +75,7 @@ let balloon = `
     </div>
     <div class="connect" style="width: 100%; display: flex;"></div>`
 let line = `
-    <div class="line-wrap">
-        <div class="line-left"></div>
-    </div>
+    
     <div class="connect"></div>`
 let text = `
     <div class="text-wrap"></div>
