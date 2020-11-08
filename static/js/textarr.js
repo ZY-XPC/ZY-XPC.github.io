@@ -69,6 +69,7 @@ let textArr = [
 
 let balloon = `
     <div class="balloon-wrap">
+    
         <img src="static/images/logo.png" id="bg-balloon-logo">
     </div>
     <div class="connect" style="width: 100%; display: flex;"></div>`

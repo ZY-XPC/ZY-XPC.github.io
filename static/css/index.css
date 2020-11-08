@@ -65,7 +65,15 @@ body{
 img[id*="bg-balloon-"]{
     position: absolute;
 }
-
+img#bg-balloon-large{
+    transform: translateY(-17%);
+    right: -55px;
+}
+img#bg-balloon-small{
+    width: 135px;
+    right: 45px;
+    transform: translateY(-10%);
+}
 img#bg-balloon-logo{
     height: 120px;
     right: 0;
@@ -156,6 +164,7 @@ img#bg-balloon-logo{
         flex-direction: column;
     }
     #resume,
+    
     .line-wrap{
         padding-left: 5px;
     }
@@ -166,7 +175,16 @@ img#bg-balloon-logo{
         margin-left: 15px;
         padding: 60px 30px 40px 0;
     }
-    
+    img#bg-balloon-small {
+        width: 85px;
+        right: 32px;
+        transform: translateY(-10%);
+    }
+    img#bg-balloon-large {
+        transform: translateY(-17%);
+        right: -40px;
+        width: 105px;
+    }
     img#bg-balloon-logo {
         height: 62px;
     }
