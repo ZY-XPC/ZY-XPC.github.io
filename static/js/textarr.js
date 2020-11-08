@@ -77,16 +77,6 @@ let balloon = `
 let line = `
     <div class="line-wrap">
         <div class="line-left"></div>
-        <div class="line-right">
-            <p class="line-defColor line-item1"></p>
-            <p class="line-darkColor line-item2"></p>
-            <p class="line-defColor line-item3"></p>
-            <p class="line-midColor line-item4"></p>
-            <p class="line-darkColor line-item5"></p>
-            <p class="line-midColor line-item6"></p>
-            <p class="line-darkColor line-item7"></p>
-            <p class="line-midColor line-item7"></p>
-        </div>
     </div>
     <div class="connect"></div>`
 let text = `

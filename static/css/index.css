@@ -8,13 +8,8 @@ body{
 }
 li{list-style: none;}
 html{font-family: 宋体;}
-#codeEdit{
-    width: 8%;
-    height: 97vh;
-    margin: auto 0;
-}
 #resume{
-    width: 88%;
+    width: 100%;
     min-width: 700px;
     margin: auto 0;
     position: relative;
@@ -113,48 +108,7 @@ img#bg-balloon-logo{
     display: flex;
     flex-direction: column;
 }
-.line-defColor{
-    background-color: #F3D383;
-}
-.line-midColor{
-    background-color: #F3C583;
-}
-.line-darkColor{
-    background-color: #EDAF45;
-}
-.line-item1{
-    height: 20%;
-}
-.line-item2{
-    height: 20px;
-    flex-shrink: 0;
-}
-.line-item3{
-    height: 30px;
-    flex-shrink: 0;
-}
-.line-item4{
-    height: 20%;
-    flex-shrink: 0;
-}
-.line-item5{
-    height: 25px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    flex-shrink: 0;
-}
-.line-item6{
-    height: 10%;
-    flex-shrink: 0;
-}
-.line-item7{
-    height: 8%;
-    flex-shrink: 0;
-}
-.line-item8{
-    height: 8%;
-    flex-shrink: 0;
-}
+
 .text-wrap{
     margin-left: 30px;
     padding: 40px 50px 40px 0;
