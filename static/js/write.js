@@ -19,7 +19,7 @@ function writeText(item, childArr=[], childIndex, parent=document.querySelector(
         if(num <= text.length){
             dom.innerHTML = text.substr(0, num)
             resume.scrollTop = 100000
-            num=num+1
+            num++
         }else{
             clearInterval(timer)
             if (data.children) {
