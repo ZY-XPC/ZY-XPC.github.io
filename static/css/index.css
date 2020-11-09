@@ -1,7 +1,10 @@
 ﻿
 *{margin:0;padding: 0;}
 body{
-    height: 100vh;background:#ffe;
+    height: 100vh;background:#ffe;  
+    background: #ebf6f7;
+    
+      
 }
 li{list-style: none;}
 html{font-family: 宋体;}
@@ -115,7 +118,7 @@ img#bg-balloon-logo{
 /*指定文本换行规则     这里貌似可以自适应网页   */
 
 .inten{
-    color: #EF8C06;
+    color: #eedeb0;
 }
 /*
 .text-title{
