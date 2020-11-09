@@ -1,7 +1,7 @@
 ﻿
 *{margin:0;padding: 0;}
 body{
-    height: 100vh;background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+    height: 100vh;background:#ffe;
 }
 li{list-style: none;}
 html{font-family: 宋体;}
@@ -115,15 +115,14 @@ img#bg-balloon-logo{
 /*指定文本换行规则     这里貌似可以自适应网页   */
 
 .inten{
-    color: #FFFFFF;
+    color: #EF8C06;
 }
-
+/*
 .text-title{
     margin-top: 15px;
     color: #548DD4;
     margin-bottom: 5px;
 }
-/*
 文档title标签的文本内容:
 */
 .base-info{
