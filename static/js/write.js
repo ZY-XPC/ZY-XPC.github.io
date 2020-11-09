@@ -44,7 +44,7 @@ function writeText(item, childArr=[], childIndex, parent=document.querySelector(
                 parentList = []
             }
         }
-    }, 55);
+    }, 150);   /*默认55  每个字出现时间  */
 }
 function filterLength () {
     for (let i = List.length-1; i >=0; i--) {
