@@ -18,7 +18,8 @@
 <script src="static/js/write.js"></script>
 <script>
     let currentIndex_ = 0
-    function writeIntro (intro='', time, callback) {
+    <!--定义写入时间函数-->
+    function writeIntro (intro='', time, callback) {     
         let connect = document.querySelectorAll('.connect')
         if(connect.length < 1){
             resume.innerHTML = intro
@@ -29,36 +30,28 @@
             callback()
         }, time);
     }
+    <!--/*定义简历页面时间函数*/-->
     function startResume () {
-        writeIntro(balloon, 900, ()=>{
-            writeIntro(line, 200, ()=>{
-                writeIntro(text, 0, ()=>{
+        writeIntro(balloon, 300, ()=>{
+            writeIntro(line, 0, ()=>{
+                writeIntro(text, 1500, ()=>{
                     writeText(textArr[currentIndex_])
                 })
             })
         })
     }
-    
-    let num = 0
-    let t = setInterval(() => {
-        if(num <= style.length){
-            codeEdit.innerHTML = Prism.highlight(style.substr(0, num), Prism.languages.css); 
-            codeEdit.scrollTop = 100000
-            styleContent.innerHTML = style.substr(0, num)
-            num++
-        }else{
-            clearInterval(t)
-        }
-    }, 70)
+      
     setTimeout(() => {
         if(document.body.clientWidth < 500){
             setTimeout(() => {
-                resume.style.cssText = 'height:100vh!important'   /* 小窗高度 */
-            }, 5000);
+                resume.style.cssText = 'height:95vh!important'   /* 小窗高度 */
+            }, 3000);
         }
         startResume()
-    }, 10000);
+    }, 3000);
 </script>
+
+
 <script>
     let sbTimer = null
     function toggleScrollBar (self) {
@@ -70,7 +63,8 @@
 
         sbTimer = setTimeout(() => {
             self.classList.remove('sbShow')
-        }, 800);
+        }, 10);
     }
 </script>
+
 </html>

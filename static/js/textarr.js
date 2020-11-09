@@ -5,7 +5,7 @@ let textArr = [
     {
         name: 'h2',
         class: 'inten',
-        text: '求职意向：前端开发工程师'
+        text: '谁能想到，故事就这样开始了……'
     }, {
         name: 'h4',
         class: 'text-title',
@@ -306,9 +306,8 @@ let textArr = [
 
 let balloon = `
     <div class="balloon-wrap">
-        <img src="static/images/balloon.png" id="bg-balloon-small">
-        <img src="static/images/balloon.png" id="bg-balloon-large">
-        <img src="static/images/logo.png" id="bg-balloon-logo">
+        <img src="static/images/1.jpg" id="bg-balloon-small">
+        
     </div>
     <div class="connect" style="width: 100%; display: flex;"></div>`
 let line = `
@@ -317,4 +316,4 @@ let text = `
     <div class="text-wrap"></div>
 `
 
-
+       /* <img src="static/images/logo.png" id="bg-balloon-logo">  */
