@@ -5,7 +5,7 @@ let textArr = [
     {
         name: 'h3',
         class: 'inten',
-        text: '谁  能想到,'
+        text: '  谁  能想到,'
     }, {
              name: 'h4',
              class: 'text-title',
@@ -13,7 +13,7 @@ let textArr = [
         }, {
         name: 'h3',
         class: 'inten',
-        text: '故事  就这样  开始了  ……'
+        text: '  故事  就这样  开始了  ……'
     }, {
         name: 'h4',
         class: 'text-title',
