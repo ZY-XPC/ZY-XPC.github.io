@@ -1,7 +1,11 @@
 
 
 
-let textArr = [
+let textArr = [{
+        name: 'h4',
+        class: 'text-title',
+        text: '      '
+    },
     {
         name: 'h3',
         class: 'inten',
