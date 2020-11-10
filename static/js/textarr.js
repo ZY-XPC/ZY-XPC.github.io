@@ -3,53 +3,9 @@
 
 let textArr = [
     {
-        name: 'h2',
+        name: 'h3',
         class: 'inten',
         text: '谁能想到，故事就这样开始了……'
-    }, {
-        name: 'h4',
-        class: 'text-title',
-        text: '基本信息'
-    }, {
-        name: 'div',
-        class: 'base-info',
-        children: [{
-            name: 'div',
-            children: [{
-                name: 'div',
-                text: '姓名：Edit'
-            },{
-                name: 'div',
-                text: '年龄：23'
-            }]
-        }, {
-            name: 'div',
-            children: [{
-                name: 'div',
-                text: '毕业院校：中山大学南方学院'
-            },{
-                name: 'div',
-                text: '联系电话：15622749328'
-            }]
-        }]
-    }, {
-        name: 'h4',
-        class: 'text-title',
-        text: '教育背景'
-    }, {
-        name: 'div',
-        class: 'school',
-        children: [{
-            name: 'span',
-            class: 'mr',
-            text: '学校：中山大学南方学院'
-        }, {
-            name: 'span',
-            text: '专业：计算机科学与技术'
-        }, {
-            name: 'div',
-            text: '主修课程：HTML、CSS、JavaScript、Vue、JavaEE、MySQL',
-        }]
     }, {
         name: 'h4',
         class: 'text-title',
@@ -59,7 +15,7 @@ let textArr = [
         class: 'ul-list',
         children: [{
             name: 'li',
-            text:'熟练掌握',
+            text:'那是8月9号，你刷到了我的答案，并评论了我，再后来私聊了我，接下来的事情你都知道了~',
             children: [{
                 name: 'span',
                 class: 'tag',
@@ -67,240 +23,33 @@ let textArr = [
             }]
         }, {
             name: 'li',
-            text:'能熟练运用不同主流UI框架ElementUI及多个移动端UI框架'
-        }, {
+            text:'说实话，你很幸运，在合适的时间遇到了我。但我想，我更幸运，因为你等我比我等你更久。对吧，屏幕那端评论我“小姐姐可以么[捂嘴笑]”的大姐姐~'
+        },
+        {
             name: 'li',
-            text:'掌握前端主流',
-            children: [{
-                name: 'span',
-                class: 'tag',
-                text: 'Vue框架'
-            }]
-        }, {
+            text:'你请我看电影那天，你问我，会遇到更好的吗？我说，会的。显然，这个答案你并不满意。其实，在拉你手之前我就考虑过这个问题，而且我知道我说一些甜言蜜语哄你开心更应景一些，但是，看到你还是很严肃的问我，我想我应该真诚地正面回答你。'
+        },
+        {
             name: 'li',
-            text:'熟练掌握',
-            children: [{
-                name: 'span',
-                class: 'tag',
-                text: 'H5混合APP开发'
-            }, {
-                name: 'span',
-                text: '，跨多端技术uni-app、apicloud'
-            }]
-        }, {
+            text:'是啊，大千世界，各个方面超过你我的人大有人在。但是，我更觉得，已经拥有的就是最好的，欲望是无穷尽的，这山望着那山高是不可取的；没必要去和别人浪费自己的时间和精力，有时间不如陪一陪身边人，做一做爱做的事。之前，我们聊过别人的出轨、分手，很多时候是因为孤单寂寞空虚和冷。这又与性是分不开的。年龄越大，越发现这些东西其实是可以忍受的，只是想不想罢了。'
+        },
+        {
             name: 'li',
-            text:'了解微信小程序开发'
-        }, {
+            text:'还记得你小时候放学没人接你的故事吗？作为一个学校离家近、基本没有家长接过的孩子，可能很难体会你的心境。我比较类似的经历可能就是，午睡醒了，发现身边空无一人，特别失落，孤独和无助吧。以后你孤单的时候，希望你来找我，让我一直陪着你。'
+        },
+        {
             name: 'li',
-            text:'熟悉后端语言Java、node.js'
-        }, {
+            text:'有人说，男人天生向往自由，但有时候男人又想要有一个家。自由和束缚，看起来是相对的，但在这里并不是如此。和你在一起，我感到舒适，感到心安，在茫茫人海中感到安定。还有什么能比这让一个男人更安心的事呢？在家里，在床上，在身边，在眼前，那一刻的我们彼此毫不设防，也没有距离。'
+        },
+        {
             name: 'li',
-            text: '熟悉',
-            children: [{
-                name: 'span',
-                class: 'tag',
-                text: 'css预处理器'
-            }, {
-                name: 'span',
-                text: 'sass、stylus以及前端构建工具webpack和npm包管理库'
-            }]
-        }]
-    }, {
-        name: 'h4',
-        class: 'text-title',
-        text: '工作经历'
-    }, {
-        name: 'div',
-        class: 'work', 
-        children:[{
-            name: 'span',
-            class: 'mr',
-            text: '2018.08 — 2019.06'
-        }, {
-            name: 'span',
-            text: 'web前端开发'
-        }]
-    }, {
-        name: 'ul',
-        class: 'ul-list',
-        children: [{
+            text:'我不高、不帅，也没钱，和常人比也不够聪明，更没有什么家庭背景。但我想，这算是我的优势，对自己有比较清楚的认识。想要的东西要靠自己的奋斗，未来不会是一帆风顺的，但希望我们都是彼此生命中极其重要的人。'
+        },
+        {
             name: 'li',
-            text:'担任公司前端技术部主管，负责',
-            children: [{
-                name: 'span',
-                class: 'tag',
-                text: '带领新人、项目安排、BUG解决、产品优化、定期开展技术交流会议'
-            }]
-        }, {
-            name: 'li',
-            text: '负责公司项目开发（web hybridApp、微信公众号H5），其他公司基础项目开发，如PC端商城，企业响应式网站，APP开发！'
-        }]
-    }, {
-        name: 'h4',
-        class: 'text-title',
-        text: '项目经验'
-    }, {
-        name: 'div',
-        class: 'item-lv',
-        children: [{
-            name: 'ul',
-            class: 'ul-list',
-            children: [{
-                name: 'li',
-                class: 'project-title',
-                text: '项目一：宠物商城（混合APP开发）'
-            }, {
-                name: 'li',
-                text: '使用技术栈：YDUI框架、',
-                children: [{
-                    name: 'span',
-                    class: 'tag',
-                    text: 'Vue全家桶、ApiCloud跨多端打包'
-                }]
-            }, {
-                name: 'li',
-                text: '项目描述：基于vue-cli搭建的web应用，多用户商城。功能主要包括商家入驻平台上传个人身份信息、发布宠物信息、会员商家一对一聊天、商城买卖、城市筛选。其中包含收货地址、搜索记录、宠物和商家店铺收藏的CRUD操作'
-            }]
-        }, {
-            name: 'ul',
-            class: 'ul-list',
-            children: [{
-                name: 'li',
-                class: 'project-title',
-                text: '项目二：智慧校园类（混合APP开发）'
-            }, {
-                name: 'li',
-                text: '使用技术栈：',
-                children: [{
-                    name: 'span',
-                    class: 'tag',
-                    text: 'Vue全家桶、'
-                }, {
-                    name: 'span',
-                    text: '滴滴官方'
-                }, {
-                    name: 'span',
-                    class: 'tag',
-                    text: 'cube-ui'
-                }, {
-                    name: 'span',
-                    text: '框架、'
-                }, {
-                    name: 'span',
-                    class: 'tag',
-                    text: 'ApiCloud跨多端打包'
-                }]
-            }, {
-                name: 'li',
-                text: '项目描述：老师发布作业、考勤点到、发布校园动态...家长接收信息，与老师端进行交互'
-            }]
-        }, {
-            name: 'ul',
-            class: 'ul-list',
-            children: [{
-                name: 'li',
-                class: 'project-title',
-                text: '项目三：微信公众号，亲子游商城'
-            }, {
-                name: 'li',
-                text: '使用技术栈：',
-                children: [{
-                    name: 'span',
-                    class: 'tag',
-                    text: 'Vue、Vue-Router、Axios、Stylus'
-                }, {
-                    name: 'span',
-                    text: '、YDUI、Vue-awesome-swiper'
-                }]
-            }, {
-                name: 'li',
-                text: '项目描述：1. Vue-cli脚手架搭建项目'
-            }, {
-                name: 'li',
-                text: '2. 使用Vue-Router做应用页面跳转，路由导航守卫权限控制,params、query传参'
-            }, {
-                name: 'li',
-                text: '3. Axios用做Ajax数据交互，dev环境下配置代理解决跨域，使用createAPI配置baseURL。'
-            }, {
-                name: 'li',
-                text: '4. 使用CSS预处理器stylus简化CSS代码编写，浏览器兼容前缀，rem函数封装。'
-            }, {
-                name: 'li',
-                text: '5. 使用UI框架YDUI，减少不必要的造轮子，提高代码编写效率，用户体验。'
-            }, {
-                name: 'li',
-                text: '6. 使用vue-awesome-swiper轮播图插件。'
-            }]
-        }, {
-            name: 'ul',
-            class: 'ul-list',
-            children: [{
-                name: 'li',
-                class: 'project-title',
-                text: '项目四：企业官网（响应式）、商城（PC)兼容IE8以及多端浏览器'
-            }, {
-                name: 'li',
-                text: '使用技术栈：',
-                children: [{
-                    name: 'span',
-                    class: 'tag',
-                    text: 'jQuery'
-                }]
-            }, {
-                name: 'li',
-                text: 'PC使用兼容写法兼容Ie8、使用渐进增强逐渐增添些许特效，mediaQuery实现网页自适应，移动端样式权重高于PC，完成移动端页面布局。'
-            }]
-        }]
-    }, {
-        name: 'h4',
-        class: 'text-title',
-        text: '自我评价'
-    }, {
-        name: 'ul',
-        class: 'ul-list',
-        children: [{
-            name: 'li',
-            text:'具有',
-            children: [{
-                name: 'span',
-                class: 'tag',
-                text: '团队管理经验'
-            }, {
-                name: 'span',
-                text: '，拥有良好的'
-            }, {
-                name: 'span',
-                class: 'tag',
-                text: '团队协调能力'
-            }, {
-                name: 'span',
-                text: '，工作当中和同事融洽相处'
-            }]
-        }, {
-            name: 'li',
-            text:'常混迹于',
-            children: [{
-                name: 'span',
-                class: 'tag',
-                text: '前端主流社区'
-            }, {
-                name: 'span',
-                text: '（github、掘金、知乎、简书），翻阅前端'
-            }, {
-                name: 'span',
-                class: 'tag',
-                text: '大咖'
-            }, {
-                name: 'span',
-                text: '博客（张鑫旭、阮一峰、黄轶）'
-            }]
-        }, {
-            name: 'li',
-            text:'热爱前端、思维活跃、学习能力强，抗压能力强。'
-        }, {
-            name: 'li',
-            text:'性格随和、诚恳稳重、身体素质较好、能够很快地适应新环境。'
-        }]
+            text:'剩下的就交给时间吧。岁月静好，愿与君老。'
+        }
+      ]
     }
 ]
 
